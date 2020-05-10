@@ -4,11 +4,13 @@
       <title>Catch the ingredients!</title>
       <script src="js/processing.1.4.8.min.js"></script>
       <script type="text/javascript">
-        function drawGame(processing) {
+        function drawGame(p) {
             //You can put your game/drawing code here. For a full reference of functions
             //see http://processingjs.org/reference/. You will need to always put processing. before the
             //function. Below is an example ellipse...
-            processing.ellipse(560, 460, 550, 550);
+            p.ellipse(560, 460, 550, 350);
+            p.fill(400,20,200);
+            p.text("Hi my name is Lily!",25,73);
         }
       </script>
  </head>
