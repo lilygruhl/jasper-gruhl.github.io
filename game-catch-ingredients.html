@@ -16,10 +16,10 @@
      <canvas id="game-canvas"></canvas>
      <script type="text/javascript">
         function sketchProc(processing){
-         processing.draw = function() {
             processing.size(1200, 600);
+            processing.draw = function() {
                drawGame(processing);
-         }
+            }
         }
         var canvas = document.getElementById("game-canvas");
         var processingInstance = new Processing(canvas, sketchProc);
