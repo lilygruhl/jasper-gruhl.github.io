@@ -1,18 +1,25 @@
 <!DOCTYPE html>
- 2 <html>
- 3 <head>
- 4     <title>Hello Web - Accessing JavaScript from Processing</title>
- 5     <script src="js/processing.1.4.8.min.js"></script>
- 6 </head>
- 7 <body>
- 8     <div id="msg">
- 9     </div>
-10     <!--<canvas data-processing-sources="mixing.pde"></canvas>-->
-11     <script type="application/javascript">
-12         var jsString = "Hello from JavaScript!";
-13         var printMessage = function (msg) {
-14             document.getElementById('msg').innerHTML = "Message: " + msg;
-15         };
-16     </script>
-17 </body>
-18 </html>
+ <html>
+ <head>
+      <title>Hello Web - Accessing JavaScript from Processing</title>
+      <script src="js/processing.1.4.8.min.js"></script>
+      <script type="text/javascript">
+        function drawGame(processing) {
+            processing.ellipse(560, 460, 550, 550);
+        }
+      </script>
+ </head>
+ <body>
+     <canvas id="game-canvas" width="800" height="1000"></canvas>
+     <script type="text/javascript">
+        function sketchProc(processing){
+         processing.draw = function() {
+            processing.size(1200, 600);
+               drawGame(processing);
+         }
+        }
+        var canvas = document.getElementById("game-canvas");
+        var processingInstance = new Processing(canvas, sketchProc);
+      </script>
+</body>
+</html>
