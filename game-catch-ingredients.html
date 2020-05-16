@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+      <title>Catch the ingredients!</title>
+      <script src="js/processing.1.4.8.min.js"></script>
+      <script src="js/sts/draw-game.js"></script>
+       
+ </head>
+ <body>
+     <canvas id="game-canvas"></canvas>
+     <script type="text/javascript">
+        function sketchProc(processing){
+            processing.size(1200, 600);
+            processing.draw = function() {
+               drawGame(processing);
+            }
+        }
+        var canvas = document.getElementById("game-canvas");
+        var processingInstance = new Processing(canvas, sketchProc);
+      </script>
+</body>
+</html>
