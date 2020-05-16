@@ -5,6 +5,6 @@ function drawGame(p) {
     p.ellipse(200,200,200,200);
     p.ellipse(200,200,100,100);
 
-    var b = loadImage("https://previews.123rf.com/images/bdcollins/bdcollins1402/bdcollins140200370/26337001-deli-ham-slices.jpg");
+    var b = p.loadImage("https://previews.123rf.com/images/bdcollins/bdcollins1402/bdcollins140200370/26337001-deli-ham-slices.jpg");
     p.image(b, 0, 0);
 }
