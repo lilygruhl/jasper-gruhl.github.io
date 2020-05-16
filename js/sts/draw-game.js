@@ -5,8 +5,7 @@ function drawGame(p) {
     p.ellipse(560, 460, 550, 350);
     p.fill(400,20,200);
     p.text("Hi my name is Lilyyy!",25,73);
-    
-    PImage b;
-    b = loadImage("https://previews.123rf.com/images/bdcollins/bdcollins1402/bdcollins140200370/26337001-deli-ham-slices.jpg");
-    image(b, 0, 0);
+   
+    b = p.loadImage("https://previews.123rf.com/images/bdcollins/bdcollins1402/bdcollins140200370/26337001-deli-ham-slices.jpg");
+    p.image(b, 0, 0);
 }
