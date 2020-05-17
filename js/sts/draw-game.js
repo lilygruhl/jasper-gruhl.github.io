@@ -4,5 +4,5 @@ function drawGame(p) {
     //function. Below is an example ellipse...
     p.ellipse(560, 460, 550, 350);
     p.fill(400,20,200);
-    p.text("Hi my name is Jasper!",25,73);
+    p.image(breadImage, 0, 0);
 }
