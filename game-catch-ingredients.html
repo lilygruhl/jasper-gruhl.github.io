@@ -2,30 +2,11 @@
  <html>
  <head>
       <title>Catch the ingredients!</title>
-      <script src="js/processing.1.4.8.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
       <script src="js/sts/draw-game.js"></script>
        
  </head>
  <body>
   <h1> Welcome To Stack The Sandwiches!!!!</h1>
-     <canvas id="game-canvas"></canvas>
-     <script type="text/javascript">
-        function sketchProc(processing){
-            processing.size(1200, 600);
-            processing.setup = function() {
-                y = 0
-                hamImage = processing.loadImage("https://previews.123rf.com/images/bdcollins/bdcollins1402/bdcollins140200370/26337001-deli-ham-slices.jpg");
-                breadImage = processing.loadImage("https://siennabakery.com/wp-content/uploads/2012/10/dutch-crunch.png");
-                pickleImage = processing.loadImage("https://www.pngitem.com/pimgs/m/62-628997_pickle-slice-png-sliced-pickles-transparent-background-png.png");
-                lettuceImage = processing.loadImage("https://specialtyproduce.com/sppics/1769.png");
-                setup(processing);
-            };
-            processing.draw = function() {
-               drawGame(processing);
-            };
-        }
-        var canvas = document.getElementById("game-canvas");
-        var processingInstance = new Processing(canvas, sketchProc);
-      </script>
 </body>
 </html>
