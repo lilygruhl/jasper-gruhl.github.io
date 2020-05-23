@@ -12,15 +12,17 @@ function preload() {
 }
 
 function setup() {
-
-    background(255,255,255);
     createCanvas(1000, 1000);
 }
 
-//Called 10 times per second
 function draw() {
+    background(255,255,255);
     y = y+1;
     noStroke();
     image(hamImage,0, y, 70, 70);
 
+}
+
+function mousePressed() {
+  y = 0;
 }
