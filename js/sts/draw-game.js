@@ -1,11 +1,28 @@
-//called once at the start
-function setup(p) {
-    p.background(255,255,255);
+let hamImage;
+let breadImage;
+let pickleImage;
+let lettuceImage;
+let y = 0;
+
+function preload() {
+    hamImage = loadImage("images/ham.jpg");
+    breadImage = loadImage("images/dutch-crunch.png");
+    pickleImage = loadImage("images/pickle.png");
+    lettuceImage = loadImage("images/lettuce.png");
 }
 
-//Called 10 times per second
-function drawGame(p) {
-    y = y+1
-    p.noStroke();
-    p.image(pickleImage,400,y,70,70);
+function setup() {
+    createCanvas(1000, 1000);
+}
+
+function draw() {
+    background(255,255,255);
+    y = y+1;
+    noStroke();
+    image(hamImage,0, y, 70, 70);
+
+}
+
+function mousePressed() {
+    y = 0;
 }
