@@ -3,6 +3,7 @@ let breadImage;
 let pickleImage;
 let lettuceImage;
 let y = 0;
+let speed = 5;
 
 function preload() {
     hamImage = loadImage("images/ham.jpg");
@@ -16,13 +17,15 @@ function setup() {
 }
 
 function draw() {
+    if(y>475){
+        return;
+    }
     background(255,255,255);
-    y = y+1;
-    noStroke();
+    y = y + speed;
     image(hamImage,0, y, 70, 70);
-
+    image(lettuceImage, 200, y, 70, 70);
 }
 
 function mousePressed() {
-    y = 0;
+    y = 90;
 }
