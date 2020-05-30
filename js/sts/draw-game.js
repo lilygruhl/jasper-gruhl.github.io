@@ -27,8 +27,12 @@ function draw() {
     y = y + speed;
     image(hamImage,0, y, 70, 70);
     image(lettuceImage, 200, y, 70, 70);
-     ellipse (100, 100, 100, 100);
-    ellipse (100, 100, 50, 50);
+    drawPlate(100, 100, 100, 100)
+}
+
+function drawPlate(x, y, w, h) {
+  ellipse (x, y, w, h);
+  ellipse (x, y, w/2, h/2);
 }
 
 function mousePressed() {
