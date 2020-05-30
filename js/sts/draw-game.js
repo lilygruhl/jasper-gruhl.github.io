@@ -27,7 +27,7 @@ function draw() {
     y = y + speed;
     image(hamImage,0, y, 70, 70);
     image(lettuceImage, 200, y, 70, 70);
-    drawPlate(100, 100, 100, 100)
+    drawPlate(100, 1000, 100, 100)
 }
 
 function drawPlate(x, y, w, h) {
