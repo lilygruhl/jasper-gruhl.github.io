@@ -1,3 +1,4 @@
+
 let hamImage;
 let breadImage;
 let pickleImage;
@@ -10,6 +11,8 @@ function preload() {
     breadImage = loadImage("images/dutch-crunch.png");
     pickleImage = loadImage("images/pickle.png");
     lettuceImage = loadImage("images/lettuce.png");
+   
+
 }
 
 function setup() {
@@ -24,6 +27,8 @@ function draw() {
     y = y + speed;
     image(hamImage,0, y, 70, 70);
     image(lettuceImage, 200, y, 70, 70);
+     ellipse (100, 100, 100, 100);
+    ellipse (100, 100, 50, 50);
 }
 
 function mousePressed() {
