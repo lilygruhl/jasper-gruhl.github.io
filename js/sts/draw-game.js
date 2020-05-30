@@ -11,7 +11,7 @@ function preload() {
     breadImage = loadImage("images/dutch-crunch.png");
     pickleImage = loadImage("images/pickle.png");
     lettuceImage = loadImage("images/lettuce.png");
-   
+    plateImage = loadImage("images/plate.jpg");
 
 }
 
@@ -31,8 +31,7 @@ function draw() {
 }
 
 function drawPlate(x, y, w, h) {
-  ellipse (x, y, w, h);
-  ellipse (x, y, w/2, h/2);
+ image(plateImage, x, y, w, h);
 }
 
 function mousePressed() {
