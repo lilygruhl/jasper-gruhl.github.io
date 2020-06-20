@@ -1,22 +1,28 @@
 <!DOCTYPE html>
  <html>
  <head>
-      <title>Catch the ingredients!</title>
-      <script src="js/processing.1.4.8.min.js"></script>
-      <script src="js/sts/draw-game.js"></script>
-       
+    <title>Catch the ingredients!</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <script src="js/sts/draw-game.js"></script>
+    <style type="text/css">
+
+    #p5_loading {
+        <img src="https://i.pinimg.com/originals/e8/18/a7/e818a71df4a9c6cb3b354a0a59838c7a.gif">
+        color: red;
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        height: 1000px;
+        width: 1000px;
+    }
+
+    </style>
  </head>
  <body>
-     <canvas id="game-canvas"></canvas>
-     <script type="text/javascript">
-        function sketchProc(processing){
-            processing.size(1200, 600);
-            processing.draw = function() {
-               drawGame(processing);
-            }
-        }
-        var canvas = document.getElementById("game-canvas");
-        var processingInstance = new Processing(canvas, sketchProc);
-      </script>
+    <h1> Welcome To Stack The Sandwiches!!!!</h1>
+    <div id="p5_loading" class="loadingclass">
+        Loading...
+        <img src="https://i.pinimg.com/originals/e8/18/a7/e818a71df4a9c6cb3b354a0a59838c7a.gif">
+    </div>
 </body>
 </html>
