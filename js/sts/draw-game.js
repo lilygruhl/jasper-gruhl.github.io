@@ -4,7 +4,7 @@ let breadImage;
 let pickleImage;
 let lettuceImage;
 let y = 0;
-let speed = 5;
+let speed = 3;
 let plateX = 100
 let plateXSpeed=15
 function preload() {
@@ -21,14 +21,14 @@ function setup() {
 }
 
 function draw() {
-    if(y>475){
-        return;
-    }
     background(255,255,255);
+    if(y<600){
+    image(hamImage,0, y, 70, 70);
+    image(lettuceImage, 200, y, 70, 70);    
+    }
     y = y + speed;
     drawPlate(plateX, 500, 100, 100)
-    image(hamImage,0, y, 70, 70);
-    image(lettuceImage, 200, y, 70, 70);
+    
 }
 
 function drawPlate(x, y, w, h) {
