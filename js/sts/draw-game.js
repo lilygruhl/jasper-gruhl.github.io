@@ -23,11 +23,12 @@ function setup() {
 function draw() {
     background(255,255,255);
     if(y<600){
+    drawPlate(plateX, 500, 200, 200)
     image(hamImage,0, y, 70, 70);
     image(lettuceImage, 200, y, 70, 70);    
     }
     y = y + speed;
-    drawPlate(plateX, 500, 100, 100)
+    
     
 }
 
