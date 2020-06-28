@@ -31,7 +31,7 @@ function draw() {
       image(lettuceImage, lettuceX, ingredientY, 70, 70);    
     }
     ingredientY = ingredientY + speed;
-    drawPlate(plateX, plateY, 100, 100);
+    drawPlate(plateX, plateY, 200, 200);
     if(plateX == lettuceX && plateY == ingredientY) {
       collisionDetected();
     }
