@@ -3,10 +3,14 @@ let hamImage;
 let breadImage;
 let pickleImage;
 let lettuceImage;
-let y = 0;
+let ingredientY = 0;
 let speed = 5;
-let plateX = 100
-let plateXSpeed=15
+let plateX = 200;
+let plateY = 300;
+let plateXSpeed=15;
+let lettuceX = 200;
+
+
 function preload() {
     hamImage = loadImage("images/ham.jpg");
     breadImage = loadImage("images/dutch-crunch.png");
@@ -21,19 +25,26 @@ function setup() {
 }
 
 function draw() {
-    if(y>475){
-        return;
-    }
     background(255,255,255);
-    y = y + speed;
-    drawPlate(plateX, 500, 100, 100)
-    image(hamImage,0, y, 70, 70);
-    image(lettuceImage, 200, y, 70, 70);
+    if(ingredientY < 600){
+      image(hamImage,0, ingredientY, 70, 70);
+      image(lettuceImage, lettuceX, ingredientY, 70, 70);    
+    }
+    ingredientY = ingredientY + speed;
+    drawPlate(plateX, plateY, 200, 200);
+    if(plateX == lettuceX && plateY == ingredientY) {
+      collisionDetected();
+    }
+}
+
+function collisionDetected(){
+  alert('hello world!!');
 }
 
 function drawPlate(x, y, w, h) {
  image(plateImage, x, y, w, h);
 }
+
 function keyPressed() {
   if (keyCode === 74) {
     plateX = plateX - plateXSpeed;
